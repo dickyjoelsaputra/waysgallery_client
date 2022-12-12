@@ -1,0 +1,35 @@
+.cardbodyimg{
+    /* background-color: #2FC4B2; */
+    margin-left: 120px;
+    height: 100%;
+    width: 400px;
+      object-fit: contain;
+    border-radius: 10px;
+    box-shadow: black 0px 1px 1px;
+}
+
+.cardbodyimgselect{
+width: 100%;
+height: 100%;
+  object-fit: contain;
+    border-radius: 5px;
+    box-shadow: black 0px 3px 3px;
+}
+
+.cancel{
+    width: 100px;
+    background-color: #FF0742;
+    color: white;    
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.approve{
+  width: 100px;
+    background-color: #0ACF83;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}

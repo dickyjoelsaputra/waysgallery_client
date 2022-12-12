@@ -1,0 +1,21 @@
+.formwraper{
+    width: 700px;
+    margin: auto;
+}
+
+.textColor{
+    color: #2FC4B2;
+    padding: 20px 0px;
+}
+
+.borderColor{
+    border-color: #2FC4B2;
+}
+
+.buttonColor{
+    background-color: #2FC4B2;
+}
+
+.buttonColor:hover{
+    background-color: #2FC4B2;
+}

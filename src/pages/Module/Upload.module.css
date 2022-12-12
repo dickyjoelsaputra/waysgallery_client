@@ -1,0 +1,109 @@
+input[type="file"] {
+    display: none;
+}
+
+.image{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    /* left: 250px;
+    top: 50px;
+    position: absolute; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.customfile{
+    height: 300px;
+    margin-top: 48px;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    border: 2px black;
+    border-style: dashed;
+    opacity: 0.5;
+    flex-direction: column;
+}
+
+.buttonCancel{
+  background-color: #E7E7E7; /* Green */
+  border: none;
+  color: black;
+  padding: 3px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.buttonCancel:hover{
+  background-color: #E7E7E7; /* Green */
+    color: black;
+}
+
+.buttonPost{
+  background-color: #2FC4B2;
+  border: none;
+  color: white;
+  padding: 3px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.buttonPost:hover{
+    background-color: #2FC4B2;
+    color: white;
+}
+
+.buttonWrapper{
+    text-align: center;
+}
+
+.bottomupload{
+    margin-top: 20px;
+    width: 143px;
+    height: 150px;
+    border: 2px black;
+    border-style: dashed;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+
+.iconplus{
+    margin: 30% 30%;
+}
+
+
+.image1wrapper{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.image1{
+    height: 300px;
+    width: auto;
+}
+
+.previmage{
+    object-fit: contain;
+    height: 150px;
+    width: 150px;
+    margin-top: 22px;
+}
+
+.wrapprevimage{
+      display: flex;
+  justify-content: center;
+  align-items:center;
+  position: relative;
+}

@@ -1,0 +1,62 @@
+.buttonLogin{
+  background-color: #E7E7E7; /* Green */
+  border: none;
+  color: black;
+  padding: 3px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.buttonLogin:hover{
+  background-color: #E7E7E7; /* Green */
+    color: black;
+}
+
+.buttonRegister{
+    background-color: #2FC4B2;
+  border: none;
+  color: white;
+  padding: 3px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.buttonRegister:hover{
+    background-color: #2FC4B2;
+    color: white;
+}
+
+.centeredContent{
+    position: relative;
+    top: 20%;
+    left: 18%;
+    width: 30%;
+}
+
+.ways{
+    font-size: 80px;
+    width: 0;
+    height: 75px;
+    font-weight: 500;
+}
+
+.gallery{
+    font-size: 80px;
+    width: 0;
+    height: 120px;
+    font-weight: 500;
+    color: #2FC4B2;
+}
+
+.imgIcon{
+    position: absolute;
+    left: 160px;
+    bottom: 230px;
+}

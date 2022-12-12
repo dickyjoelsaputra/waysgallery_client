@@ -1,0 +1,41 @@
+.imagepreview{
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.wraperimage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  /* align-items: center; */
+}
+
+.customfile{
+    height: 120px;
+    margin-top: 48px;
+    margin-bottom: 93px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px black;
+    border-style: dashed;
+    opacity: 0.5;
+}
+
+.borderColor{
+    border-color: #2FC4B2;
+}
+
+.buttonColor{
+    background-color: #2FC4B2;
+}
+
+.buttonColor:hover{
+    background-color: #2FC4B2;
+}

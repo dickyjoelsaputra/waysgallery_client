@@ -1,0 +1,90 @@
+.buttonFollow{
+    margin-top: 10px;
+  background-color: #E7E7E7; /* Green */
+  border: none;
+  color: black;
+  padding: 3px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.buttonFollow:hover{
+  background-color: #E7E7E7; /* Green */
+    color: black;
+}
+
+.buttonHire{
+    margin-left: 5px;
+    margin-top: 10px;
+    background-color: #2FC4B2;
+  border: none;
+  color: white;
+  padding: 3px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.buttonHire:hover{
+    background-color: #2FC4B2;
+    color: white;
+}
+
+.rectangle{
+    background-color: #2FC4B2;
+    width: 323px;
+    height: 270px;
+    position: absolute;
+    top:-22px;
+    right: 0;
+    border-radius: 5px;
+}
+
+.userimage{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%/50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.buttonUpload{
+    background-color: #2FC4B2;
+    border: none;
+    width: 90px;
+    height: 35px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.buttonUpload:hover{
+    background-color: #2FC4B2;
+}
+
+.rightImage{
+    width: 500px;
+    z-index: 1;
+    position: absolute;
+    right: 200px;
+    top: 10px;
+}
+
+.bottompage{
+    margin-top: 10%;
+}
+
+.bottomimage{
+    width: 100%;
+    margin: 20px 20px;
+    box-shadow: 0px 0px 1px #2FC4B2;
+}
+.bottomimage:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #2FC4B2;
+}

@@ -1,0 +1,13 @@
+.buttonUpload{
+    background-color: #2FC4B2;
+    border: none;
+    width: 90px;
+    height: 35px;
+    align-self: center;
+    margin-right: 20px;
+    margin-top: 14px;
+}
+
+.buttonUpload:hover{
+    background-color: #2FC4B2;
+}
