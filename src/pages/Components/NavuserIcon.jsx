@@ -21,7 +21,7 @@ export default function Navusericon() {
         dispatch({
             type: "LOGOUT",
         });
-        navigate("/");
+        navigate("/landing");
 
     };
     return (

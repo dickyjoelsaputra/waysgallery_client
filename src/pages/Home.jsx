@@ -17,7 +17,7 @@ function Home() {
         return response.data.data;
     });
 
-    console.log(Posts)
+    // console.log(Posts)
 
     return (
         <>

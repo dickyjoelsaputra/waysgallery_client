@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/esm/Container'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
-import { Link } from 'react-router-dom';
+import { Link, redirect } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import CloudImage from '../assets/cloud-computing 1.png'
 import iconplus from '../assets/icon plus.png';
@@ -16,7 +16,8 @@ import { API } from '../config/api';
 
 function Upload() {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     const [previewImage1, setPreviewImage1] = useState(null); //image
     const [previewImage2, setPreviewImage2] = useState(null); //image
     const [previewImage3, setPreviewImage3] = useState(null); //image
@@ -91,7 +92,7 @@ function Upload() {
             // Insert category data
             await API.post("/create-post", formData, config);
 
-            navigate('/home')
+            navigate("/home");
         } catch (error) {
             console.log(error);
         }
@@ -100,6 +101,10 @@ function Upload() {
     return (
         <>
             <Navigation />
+            {
+                handleSubmit.isLoading ?
+                    ('Loading cok...') : ('successs')
+            }
             <Container className='mt-4'>
                 <Form onSubmit={(e) => handleSubmit.mutate(e)}>
                     <Row>
