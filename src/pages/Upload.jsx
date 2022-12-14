@@ -13,6 +13,7 @@ import { useMutation } from 'react-query';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { API } from '../config/api';
+import Spinner from 'react-bootstrap/Spinner';
 
 function Upload() {
 
@@ -101,10 +102,6 @@ function Upload() {
     return (
         <>
             <Navigation />
-            {
-                handleSubmit.isLoading ?
-                    ('Loading cok...') : ('successs')
-            }
             <Container className='mt-4'>
                 <Form onSubmit={(e) => handleSubmit.mutate(e)}>
                     <Row>
@@ -237,10 +234,28 @@ function Upload() {
                                 />
                             </Form.Group>
                             <div className={styles.buttonWrapper}>
-                                <Link to="/home">
-                                    <Button className={styles.buttonCancel} size='sm'>Cancel</Button>{' '}
-                                </Link>
-                                <Button type='submit' className={styles.buttonPost} size='sm'>Post</Button>{' '}
+                                {
+                                    handleSubmit.isLoading ?
+                                        <>
+                                            <Button className={styles.buttonPost} size='sm'>
+                                                <Spinner
+                                                    as="span"
+                                                    animation="border"
+                                                    size="sm"
+                                                    role="status"
+                                                    aria-hidden="true"
+                                                />
+                                                Loading...
+                                            </Button>
+                                        </> :
+                                        <>
+                                            <Link to="/home">
+                                                <Button className={styles.buttonCancel} size='sm'>Cancel</Button>{' '}
+                                            </Link>
+                                            <Button type='submit' className={styles.buttonPost} size='sm'>Post</Button>{' '}
+                                        </>
+                                }
+
                             </div>
                         </Col>
                     </Row>

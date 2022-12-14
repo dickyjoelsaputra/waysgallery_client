@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { API } from '../config/api';
 import { useParams } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
 function SendProject() {
 
@@ -97,6 +98,7 @@ function SendProject() {
         } catch (error) {
             console.log(error);
         }
+        navigate('/myoffer')
     })
 
     return (
@@ -225,9 +227,26 @@ function SendProject() {
                                     onChange={handleChange}
                                 />
                             </Form.Group>
-                            <div className={styles.buttonWrapper}>
-                                <Button type='submit' className={styles.buttonPost} size='sm'>Send Project</Button>{' '}
-                            </div>
+                            {
+                                handleSubmit.isLoading ? <>
+                                    <div className={styles.buttonWrapper}>
+                                        <Button type='submit' className={styles.buttonPost} size='sm'>
+                                            <Spinner
+                                                as="span"
+                                                animation="border"
+                                                size="sm"
+                                                role="status"
+                                                aria-hidden="true"
+                                            />
+                                            Loading...
+                                        </Button>{' '}
+                                    </div>
+                                </> : <>
+                                    <div className={styles.buttonWrapper}>
+                                        <Button type='submit' className={styles.buttonPost} size='sm'>Send Project</Button>{' '}
+                                    </div>
+                                </>
+                            }
                         </Col>
                     </Row>
                 </Form>

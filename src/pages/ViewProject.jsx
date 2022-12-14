@@ -87,9 +87,9 @@ export default function ViewProject() {
                         <p>
                             {MyOrder?.projectdesc}
                         </p>
-                        <div className='d-flex justify-content-center'>
+                        {/* <div className='d-flex justify-content-center'>
                             <Button variant="dark">Download Project</Button>
-                        </div>
+                        </div> */}
                     </Col>
                 </Row>
             </Container>

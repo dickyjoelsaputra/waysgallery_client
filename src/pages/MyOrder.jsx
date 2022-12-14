@@ -58,7 +58,7 @@ function MyOrder() {
                             Order?.map((e, i) => {
                                 return <>
                                     <tr>
-                                        <th>{i + 1}</th>
+                                        <th >{i + 1}</th>
                                         <td>{e.seller.name}</td>
                                         <td>
                                             {e.status === "success" ?
@@ -67,7 +67,7 @@ function MyOrder() {
                                                     {e.title}
                                                 </Link>
                                                 :
-                                                <p>
+                                                <p className='m-0'>
                                                     {e.title}
                                                 </p>
 
