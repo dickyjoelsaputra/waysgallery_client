@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 import { API } from "../config/api";
 import { useQuery } from 'react-query';
 import DetailPost from './DetailPost'
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 function Home() {
 
@@ -17,7 +19,28 @@ function Home() {
         return response.data.data;
     });
 
-    // console.log(Posts)
+    // handle search
+    const [previewPost, setPreviewPost] = useState(Posts); //image
+
+    const [searchInput, setSearchInput] = useState('');
+
+    const searchItems = (searchValue) => {
+        setSearchInput(searchValue)
+        if (searchInput !== '') {
+            const filteredData = previewPost.filter((item) => {
+                return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+            })
+            setPreviewPost(filteredData)
+        }
+    }
+
+    useEffect(() => {
+        if (searchInput == '') {
+            setPreviewPost(Posts)
+        }
+    }, [searchItems])
+
+    // console.log(searchInput)
 
     return (
         <>
@@ -40,13 +63,13 @@ function Home() {
                     </div>
                     <div className="col-3">
                         <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" />
+                            <input type="text" className="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => searchItems(e.target.value)} />
                         </div>
                     </div>
                 </div>
                 <ul className={style.imagegallery}>
                     {
-                        Posts?.map((e) => {
+                        previewPost?.map((e) => {
                             return <>
                                 <li>
                                     <Link to={`/detail/${e.id}`}>
